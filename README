@@ -1,5 +1,17 @@
 Householder prediction - photo classification
 
-Functiile au scopul de a invata caracteristicile unor fotografii selectate si de a testa alte fotografii daca respecta modelul invatat. 
-Functiile rgbHistogram si hsvHistogram genereaza histogramele RGB, respectiv HSV pentru o fotografie. Pe baza histogramelor (vectori linie cu un numar de elemente egal cu count_bins), functia preprocess genereaza o matrice de caracteristici (vectori RGB sau HSV, in functie de ce este selectat) si un vector coloana de etichete (1 daca imaginea corespunzatoare liniei din matrice cu acelasi indice cu linia din vector respecta modelul ales si -1 daca nu) cu ajutorul carora functia learn genereaza vectorul de parametri ai modelului ce se doreste a fi invatat. Functia evaluate acceseaza fotografii dintr-un folder si returneaza procentul numarului de imagini clasificare corect (respecta sau nu modelul invatat).
+Functiile au scopul de a invata caracteristicile unor fotografii dintr-un folder ce contine un folder cu imagini cu pisici
+("cats/") si unul cu imagini fara pisici ("not_cats/") si de a calcula procentul de incadrare corecta conform modelului invatat
+a altor fotografii dintr-un alt folder (ce contine 2 subfoldere "cats/" si "not_cats/").
+Functiile rgbHistogram si hsvHistogram genereaza histogramele RGB, respectiv HSV pentru o fotografie. Pe baza histogramelor
+(vectori linie cu un numar de elemente egal cu count_bins), functia preprocess genereaza o matrice de caracteristici
+(liniile matricei sunt vectori RGB sau HSV, in functie de ce este selectat) si un vector coloana de etichete (1 daca
+imaginea corespunzatoare liniei din matrice cu acelasi indice ca linia din vector respecta modelul ales si -1 daca nu)
+cu ajutorul carora functia learn genereaza vectorul de parametri ai modelului ce se doreste a fi invatat. Functia evaluate
+acceseaza fotografii dintr-un folder si returneaza procentul numarului de imagini clasificare corect (respecta sau nu
+modelul invatat).
 
+In functiile scrise directoarele de unde se acceseaza fotografiile necesare invatarii, evaluarii se gasesc in folderele
+"cats/" si  "not_cats/" din directoarele a coror cai sunt transmise ca parametri functiilor, insa functiile pot fi modificate
+pentru ca  directoarele sa se numeasca in conformitate cu un alt model ales pentru a fi testat cu ajutorul unui set de
+fotografii pentru invatare si a altuia pentru testare.
