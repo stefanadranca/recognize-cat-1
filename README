@@ -1,4 +1,4 @@
-Householder prediction -recognize the cat
+Householder prediction - recognize the cat
 
 Functiile au scopul de a invata caracteristicile unor fotografii dintr-un folder ce contine un folder cu imagini cu pisici
 ("cats/") si unul cu imagini fara pisici ("not_cats/") si de a calcula procentul de incadrare corecta conform modelului invatat
